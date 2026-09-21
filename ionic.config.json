@@ -1,0 +1,7 @@
+{
+  "name": "real-estate-care",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
