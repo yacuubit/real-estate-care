@@ -1,0 +1,18 @@
+<ion-card class="dashboard-card">
+  <ion-card-content>
+    <div class="card-icon">
+      <ion-icon [name]="icon"></ion-icon>
+
+      @if (badge) {
+        <ion-badge color="danger">{{ badge }}</ion-badge>
+      }
+    </div>
+
+    <div class="card-text">
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
+    </div>
+
+    <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+  </ion-card-content>
+</ion-card>

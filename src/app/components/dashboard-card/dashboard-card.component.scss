@@ -1,0 +1,58 @@
+.dashboard-card {
+  margin: 0;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(20, 27, 31, 0.1);
+}
+
+ion-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card-icon {
+  position: relative;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 12px;
+  background: #e3f5f4;
+}
+
+.card-icon ion-icon {
+  color: #00aaa2;
+  font-size: 1.75rem;
+}
+
+ion-badge {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  min-width: 20px;
+  border-radius: 10px;
+}
+
+.card-text {
+  flex: 1;
+}
+
+h2 {
+  margin: 0 0 0.25rem;
+  color: #141b1f;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  color: #475e6c;
+  font-size: 0.85rem;
+}
+
+.arrow {
+  color: #475e6c;
+  font-size: 1.25rem;
+}

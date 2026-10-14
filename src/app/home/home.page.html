@@ -1,22 +1,73 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Real Estate Care</ion-title>
+  <ion-toolbar>
+    <img
+      src="assets/logo2black.svg"
+      alt="Real Estate Care"
+      class="header-logo"
+    />
+
+    <div slot="end" class="notification-button">
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-badge color="danger">2</ion-badge>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <main class="welcome-screen">
-    <img
-      src="assets/logo2black.svg"
-      alt="Real Estate Care – Caring is in our nature"
-      class="rec-logo"
-    />
+  <main class="dashboard">
+    <section class="welcome">
+      <p class="eyebrow">Dashboard</p>
+      <h1>Goedemorgen</h1>
+      <p>Wat wilt u vandaag doen?</p>
+    </section>
 
-    <section class="welcome-card">
-      <p class="eyebrow">Inspectieapplicatie</p>
-      <h1>Hello World</h1>
-      <p>Welkom bij de mobiele inspectieapplicatie van Real Estate Care.</p>
-      <ion-button expand="block">Open dashboard</ion-button>
+    <section class="dashboard-cards" aria-label="Hoofdfuncties">
+      <app-dashboard-card
+        title="Toegewezen rapportages"
+        description="Openstaande inspecties"
+        icon="clipboard-outline"
+        [badge]="3"
+      ></app-dashboard-card>
+
+      <app-dashboard-card
+        title="Uitgevoerde rapportages"
+        description="Inzien en aanpassen"
+        icon="checkmark-circle-outline"
+      ></app-dashboard-card>
+
+      <app-dashboard-card
+        title="Kennisbank"
+        description="Normbladen en procedures"
+        icon="book-outline"
+      ></app-dashboard-card>
+
+      <app-dashboard-card
+        title="Instellingen"
+        description="Account en voorkeuren"
+        icon="settings-outline"
+      ></app-dashboard-card>
     </section>
   </main>
 </ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="dashboard" selected>
+    <ion-icon name="home-outline"></ion-icon>
+    <ion-label>Dashboard</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="rapportages">
+    <ion-icon name="document-text-outline"></ion-icon>
+    <ion-label>Rapportages</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="kennisbank">
+    <ion-icon name="book-outline"></ion-icon>
+    <ion-label>Kennisbank</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="instellingen">
+    <ion-icon name="settings-outline"></ion-icon>
+    <ion-label>Instellingen</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

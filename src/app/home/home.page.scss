@@ -1,65 +1,87 @@
-.welcome-screen {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100%;
-  padding: 3rem 1.5rem 2rem;
-  background: linear-gradient(160deg, #ffffff 0%, #e4f5f4 100%);
+ion-toolbar {
+  --background: #ffffff;
+  --border-color: #d9e5e5;
+  --min-height: 68px;
 }
 
-.welcome-card {
-  width: 100%;
-  max-width: 600px;
-  padding: 1.5rem;
-  border-left: 6px solid var(--rec-teal);
-  border-radius: 12px;
-  background: var(--rec-white);
-  box-shadow: 0 8px 24px rgba(20, 27, 31, 0.14);
-}
-
-.rec-logo {
-  display: block;
-  width: min(240px, 75%);
+.header-logo {
+  width: 128px;
   height: auto;
-  margin: 0 auto 2rem;
-  background: transparent;
-  mix-blend-mode: multiply;
+  margin-left: 16px;
+  vertical-align: middle;
 }
 
-.welcome-card {
-  padding: 1.5rem;
-  border-left: 6px solid var(--rec-teal);
-  border-radius: 12px;
-  background: var(--rec-white);
-  box-shadow: 0 8px 24px rgba(20, 27, 31, 0.14);
+.notification-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+}
+
+.notification-button ion-icon {
+  color: #141b1f;
+  font-size: 1.6rem;
+}
+
+.notification-button ion-badge {
+  position: absolute;
+  top: -8px;
+  right: -9px;
+  min-width: 18px;
+  border-radius: 10px;
+  font-size: 0.65rem;
+}
+
+ion-content {
+  --background: #f3f8f8;
+}
+
+.dashboard {
+  padding: 1.5rem 1rem 6rem;
+}
+
+.welcome {
+  margin-bottom: 1.5rem;
 }
 
 .eyebrow {
-  margin: 0 0 0.5rem;
-  color: var(--rec-teal);
-  font-size: 0.8rem;
+  margin: 0 0 0.25rem;
+  color: #00aaa2;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 h1 {
-  margin: 0 0 0.75rem;
-  color: var(--rec-dark);
+  margin: 0;
+  color: #141b1f;
   font-size: 2rem;
   font-weight: 700;
 }
 
-p {
-  color: var(--rec-slate);
-  line-height: 1.5;
+.welcome p:last-child {
+  margin: 0.4rem 0 0;
+  color: #475e6c;
 }
 
-ion-button {
-  margin-top: 1rem;
-  --background: var(--rec-teal);
-  --background-hover: #008f89;
-  --color: var(--rec-white);
-  --border-radius: 8px;
+.dashboard-cards {
+  display: grid;
+  gap: 0.85rem;
+}
+
+ion-tab-bar {
+  --background: #ffffff;
+  --border: 1px solid #d9e5e5;
+  padding-top: 0.35rem;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+ion-tab-button {
+  --color: #475e6c;
+  --color-selected: #00aaa2;
+}
+
+ion-tab-button ion-icon {
+  font-size: 1.35rem;
 }
