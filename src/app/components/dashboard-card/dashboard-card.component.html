@@ -1,18 +1,24 @@
-<ion-card class="dashboard-card">
-  <ion-card-content>
-    <div class="card-icon">
-      <ion-icon [name]="icon"></ion-icon>
+<button
+  type="button"
+  class="dashboard-card"
+  (click)="cardSelected.emit()"
+>
+  <span class="card-icon">
+    <ion-icon [name]="icon" aria-hidden="true"></ion-icon>
 
-      @if (badge) {
-        <ion-badge color="danger">{{ badge }}</ion-badge>
-      }
-    </div>
+    @if (badge) {
+      <ion-badge color="danger">{{ badge }}</ion-badge>
+    }
+  </span>
 
-    <div class="card-text">
-      <h2>{{ title }}</h2>
-      <p>{{ description }}</p>
-    </div>
+  <span class="card-text">
+    <span class="card-title">{{ title }}</span>
+    <span class="card-description">{{ description }}</span>
+  </span>
 
-    <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-  </ion-card-content>
-</ion-card>
+  <ion-icon
+    name="chevron-forward-outline"
+    class="arrow"
+    aria-hidden="true"
+  ></ion-icon>
+</button>

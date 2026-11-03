@@ -66,8 +66,18 @@ h1 {
 }
 
 .dashboard-cards {
-  display: grid;
-  gap: 0.85rem;
+  --ion-grid-padding: 0;
+  --ion-grid-column-padding: 0.425rem;
+  margin: -0.425rem;
+}
+
+.dashboard-cards ion-col {
+  display: flex;
+}
+
+.dashboard-cards app-dashboard-card {
+  display: block;
+  width: 100%;
 }
 
 ion-tab-bar {
