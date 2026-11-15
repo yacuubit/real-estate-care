@@ -1,0 +1,74 @@
+{
+  "inspections": [
+    {
+      "id": "inspectionA",
+      "inspectionDate": "2026-10-10T08:30:00Z",
+      "status": "completed",
+      "property": { "id": "propertyA", "address": "Voorbeeldstraat 10", "city": "Amsterdam", "tenantId": "tenantA" },
+      "inspector": { "id": "inspectorA", "firstName": "Alex", "lastName": "Jansen", "email": "alex@example.com" },
+      "findings": {
+        "damage": [{ "location": "Woonkamer", "isNewDamage": true, "damageType": "wear", "date": "2026-10-10", "requiresUrgentAction": false, "description": "Beschadiging van het schilderwerk." }],
+        "maintenance": [{ "location": "Badkamer", "maintenanceType": "plumbing", "requiresUrgentAction": true, "costEstimate": "0-500" }],
+        "installations": [{ "location": "Technische ruimte", "installationType": "heating", "reportedFaults": "Geen storingen gemeld.", "testProcedureUrl": null, "isApproved": true, "remarks": "Controle afgerond." }],
+        "modifications": [{ "existingSituationUrl": null, "location": "Keuken", "performedBy": "tenant", "description": "Extra wandplank geplaatst.", "requiredAction": "accept", "remarks": "Geen directe risico's vastgesteld." }],
+        "photos": []
+      }
+    },
+    {
+      "id": "inspectionB",
+      "inspectionDate": "2026-10-14T13:00:00Z",
+      "status": "completed",
+      "property": { "id": "propertyB", "address": "Voorbeeldlaan 22", "city": "Amsterdam", "tenantId": "tenantB" },
+      "inspector": { "id": "inspectorA", "firstName": "Alex", "lastName": "Jansen", "email": "alex@example.com" },
+      "findings": {
+        "damage": [{ "location": "Gang", "isNewDamage": true, "damageType": "calamity", "date": "2026-10-14", "requiresUrgentAction": true, "description": "Waterschade aan plafond." }],
+        "maintenance": [{ "location": "Dakraam", "maintenanceType": "glazing", "requiresUrgentAction": true, "costEstimate": "500-1500" }],
+        "installations": [{ "location": "Meterkast", "installationType": "electrical", "reportedFaults": "Groep valt regelmatig uit.", "testProcedureUrl": null, "isApproved": false, "remarks": "Nader onderzoek door installateur nodig." }],
+        "modifications": [{ "existingSituationUrl": null, "location": "Slaapkamer", "performedBy": "unknown", "description": "Extra stopcontact aangebracht.", "requiredAction": "inspect", "remarks": "Documentatie ontbreekt." }],
+        "photos": []
+      }
+    },
+    {
+      "id": "inspectionC",
+      "inspectionDate": "2026-10-08T10:15:00Z",
+      "status": "completed",
+      "property": { "id": "propertyC", "address": "Demoweg 5", "city": "Haarlem", "tenantId": "tenantC" },
+      "inspector": { "id": "inspectorB", "firstName": "Sam", "lastName": "Visser", "email": "sam@example.com" },
+      "findings": {
+        "damage": [{ "location": "Binnendeur", "isNewDamage": false, "damageType": "normalUse", "date": "2026-10-08", "requiresUrgentAction": false, "description": "Lichte gebruikssporen." }],
+        "maintenance": [{ "location": "Kozijn", "maintenanceType": "painting", "requiresUrgentAction": false, "costEstimate": "0-500" }],
+        "installations": [{ "location": "Badkamer", "installationType": "ventilation", "reportedFaults": "Ventilator maakt geluid.", "testProcedureUrl": null, "isApproved": true, "remarks": "Reiniging geadviseerd." }],
+        "modifications": [{ "existingSituationUrl": null, "location": "Hal", "performedBy": "contractor", "description": "Nieuwe kapstok gemonteerd.", "requiredAction": "accept", "remarks": "Bevestiging gecontroleerd." }],
+        "photos": []
+      }
+    },
+    {
+      "id": "inspectionD",
+      "inspectionDate": "2026-10-12T09:45:00Z",
+      "status": "completed",
+      "property": { "id": "propertyD", "address": "Demoplein 8", "city": "Zaandam", "tenantId": "tenantD" },
+      "inspector": { "id": "inspectorB", "firstName": "Sam", "lastName": "Visser", "email": "sam@example.com" },
+      "findings": {
+        "damage": [{ "location": "Buitendeur", "isNewDamage": true, "damageType": "violence", "date": "2026-10-12", "requiresUrgentAction": true, "description": "Schade rond het slot." }],
+        "maintenance": [{ "location": "Buitenkozijn", "maintenanceType": "woodRot", "requiresUrgentAction": false, "costEstimate": "1500+" }],
+        "installations": [{ "location": "Entree", "installationType": "security", "reportedFaults": "Intercom werkt niet.", "testProcedureUrl": null, "isApproved": false, "remarks": "Herstel noodzakelijk." }],
+        "modifications": [{ "existingSituationUrl": null, "location": "Berging", "performedBy": "tenant", "description": "Extra binnenwand geplaatst.", "requiredAction": "remove", "remarks": "Vluchtweg wordt geblokkeerd." }],
+        "photos": []
+      }
+    },
+    {
+      "id": "inspectionE",
+      "inspectionDate": "2026-10-15T11:00:00Z",
+      "status": "completed",
+      "property": { "id": "propertyE", "address": "Voorbeeldpad 3", "city": "Almere", "tenantId": "tenantE" },
+      "inspector": { "id": "inspectorA", "firstName": "Alex", "lastName": "Jansen", "email": "alex@example.com" },
+      "findings": {
+        "damage": [{ "location": "Keukenvloer", "isNewDamage": true, "damageType": "other", "date": "2026-10-15", "requiresUrgentAction": false, "description": "Losliggende tegel." }],
+        "maintenance": [{ "location": "Meterkast", "maintenanceType": "electrical", "requiresUrgentAction": true, "costEstimate": "500-1500" }],
+        "installations": [{ "location": "Woonkamer", "installationType": "cooling", "reportedFaults": "Geen storingen gemeld.", "testProcedureUrl": null, "isApproved": true, "remarks": "Installatie werkt naar behoren." }],
+        "modifications": [{ "existingSituationUrl": null, "location": "Badkamer", "performedBy": "contractor", "description": "Extra lichtpunt aangebracht.", "requiredAction": "adjustAndInspect", "remarks": "Afwerking en keuring nodig." }],
+        "photos": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+.inspection-section {
+  margin-top: 1.75rem;
+}
+
+h2 {
+  margin-bottom: 0.3rem;
+  color: #141b1f;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #475e6c;
+  font-size: 0.9rem;
+}
+
+ion-list {
+  padding: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+ion-item {
+  --background: #ffffff;
+  --color: #141b1f;
+  --min-height: 86px;
+}
+
+ion-item.selected {
+  --background: #e3f5f4;
+}
+
+ion-label h3 {
+  font-weight: 700;
+}
+
+ion-label p {
+  color: #475e6c;
+}
+
+.loading-state {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}

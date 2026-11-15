@@ -1,0 +1,44 @@
+<section class="inspection-section" aria-labelledby="inspection-heading">
+  <h2 id="inspection-heading">Uitgevoerde inspecties</h2>
+  <p class="subtitle">Nieuwste inspectie bovenaan</p>
+
+  @if (loading()) {
+    <div class="loading-state" role="status">
+      
+      <span>Inspecties laden…</span>
+    </div>
+  } @else if (errorMessage()) {
+    <p role="alert">{{ errorMessage() }}</p>
+    Opnieuw proberen
+  } @else {
+    
+      @for (inspection of inspections(); track inspection.id) {
+        <ion-item>
+            <button
+            type="button"
+            class="inspection-button"
+            (click)="selectInspection(inspection)"
+            >
+            <strong>{{ inspection.property.address }}</strong> &nbsp;
+            <span>{{ inspection.property.city }}</span>
+            <span>
+                {{ inspection.inspectionDate | date:'dd-MM-yyyy HH:mm':'UTC' }} UTC
+            </span>
+            </button>
+        </ion-item>
+        } @empty {
+        <ion-item>
+            <ion-label>Geen uitgevoerde inspecties gevonden.</ion-label>
+        </ion-item>
+        }
+    
+  }
+
+  @if (selectedInspection(); as inspection) {
+  <div aria-live="polite">
+    <app-inspection-detail
+      [inspection]="inspection"
+    ></app-inspection-detail>
+  </div>
+}
+</section>

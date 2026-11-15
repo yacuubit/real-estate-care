@@ -1,0 +1,36 @@
+ion-card {
+  margin: 1rem 0 0;
+  border-radius: 14px;
+  --background: #ffffff;
+  --color: #141b1f;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  color: #007b75;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0.4rem 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.finding {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #d9e5e5;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

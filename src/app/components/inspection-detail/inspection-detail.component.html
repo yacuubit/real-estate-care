@@ -1,0 +1,79 @@
+
+  
+    <h2>Inspectiedetails</h2>
+    <p><strong>Referentie:</strong> {{ inspection.id }}</p>
+    <p><strong>Pand:</strong> {{ inspection.property.address }}, {{ inspection.property.city }}</p>
+    <p><strong>Pand-ID:</strong> {{ inspection.property.id }}</p>
+    <p><strong>Huurder-ID:</strong> {{ inspection.property.tenantId }}</p>
+    <p><strong>Datum:</strong> {{ inspection.inspectionDate | date:'dd-MM-yyyy HH:mm':'UTC' }} UTC</p>
+    <p><strong>Status:</strong> Uitgevoerd</p>
+    <p><strong>Inspecteur:</strong> {{ inspection.inspector.firstName }} {{ inspection.inspector.lastName }}</p>
+    <p><strong>Inspecteur-ID:</strong> {{ inspection.inspector.id }}</p>
+    <p><strong>E-mail:</strong> {{ inspection.inspector.email }}</p>
+
+    <h3>Schade</h3>
+    @for (item of inspection.findings.damage; track $index) {
+      <div class="finding">
+        <p><strong>Locatie:</strong> {{ item.location }}</p>
+        <p><strong>Nieuwe schade:</strong> {{ item.isNewDamage ? 'Ja' : 'Nee' }}</p>
+        <p><strong>Soort:</strong> {{ label(item.damageType) }}</p>
+        <p><strong>Datum:</strong> {{ item.date | date:'dd-MM-yyyy':'UTC' }}</p>
+        <p><strong>Acute actie:</strong> {{ item.requiresUrgentAction ? 'Ja' : 'Nee' }}</p>
+        <p><strong>Omschrijving:</strong> {{ item.description }}</p>
+      </div>
+    } @empty {
+      <p>Geen schade geregistreerd.</p>
+    }
+
+    <h3>Achterstallig onderhoud</h3>
+    @for (item of inspection.findings.maintenance; track $index) {
+      <div class="finding">
+        <p><strong>Locatie:</strong> {{ item.location }}</p>
+        <p><strong>Soort:</strong> {{ label(item.maintenanceType) }}</p>
+        <p><strong>Acute actie:</strong> {{ item.requiresUrgentAction ? 'Ja' : 'Nee' }}</p>
+        <p><strong>Kostenindicatie:</strong> € {{ item.costEstimate }}</p>
+      </div>
+    } @empty {
+      <p>Geen achterstallig onderhoud geregistreerd.</p>
+    }
+
+    <h3>Technische installaties</h3>
+    @for (item of inspection.findings.installations; track $index) {
+      <div class="finding">
+        <p><strong>Locatie:</strong> {{ item.location }}</p>
+        <p><strong>Soort:</strong> {{ label(item.installationType) }}</p>
+        <p><strong>Storingen:</strong> {{ item.reportedFaults }}</p>
+        <p><strong>Testprocedure:</strong> {{ item.testProcedureUrl ?? 'Niet toegevoegd' }}</p>
+        <p><strong>Goedgekeurd:</strong> {{ item.isApproved ? 'Ja' : 'Nee' }}</p>
+        <p><strong>Opmerkingen:</strong> {{ item.remarks }}</p>
+      </div>
+    } @empty {
+      <p>Geen installaties geregistreerd.</p>
+    }
+
+    <h3>Modificaties</h3>
+    @for (item of inspection.findings.modifications; track $index) {
+      <div class="finding">
+        <p><strong>Bestaande situatie:</strong> {{ item.existingSituationUrl ?? 'Niet toegevoegd' }}</p>
+        <p><strong>Locatie:</strong> {{ item.location }}</p>
+        <p><strong>Uitgevoerd door:</strong> {{ label(item.performedBy) }}</p>
+        <p><strong>Omschrijving:</strong> {{ item.description }}</p>
+        <p><strong>Actie:</strong> {{ label(item.requiredAction) }}</p>
+        <p><strong>Opmerkingen:</strong> {{ item.remarks }}</p>
+      </div>
+    } @empty {
+      <p>Geen modificaties geregistreerd.</p>
+    }
+
+    <h3>Foto's</h3>
+    @for (photo of inspection.findings.photos; track photo.id) {
+      <div class="finding">
+        <p><strong>Referentie:</strong> {{ photo.id }}</p>
+        <p><strong>Onderdeel:</strong> {{ label(photo.section) }}, bevinding {{ photo.itemIndex + 1 }}</p>
+        <p>{{ photo.description }}</p>
+        <img loading="lazy">
+      </div>
+    } @empty {
+      <p>Geen foto's toegevoegd.</p>
+    }
+  

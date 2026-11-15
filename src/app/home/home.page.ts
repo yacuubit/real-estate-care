@@ -1,3 +1,5 @@
+import { InspectionListComponent } from '../components/inspection-list/inspection-list.component';
+
 import { Component, inject } from '@angular/core';
 import {
   AlertController,
@@ -45,6 +47,7 @@ import { DashboardCardComponent } from '../components/dashboard-card/dashboard-c
     IonTabButton,
     IonToolbar,
     DashboardCardComponent,
+    InspectionListComponent,
   ],
 })
 export class HomePage {
